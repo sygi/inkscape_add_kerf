@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <_name>Notchify</_name>
+  <id>org.ekips.filter.notchify</id>
+  <dependency type="executable" location="extensions">notchify.py</dependency>
+  <dependency type="executable" location="extensions">metaext.py</dependency>
+  <dependency type="executable" location="extensions">simplestyle.py</dependency>
+  <dependency type="executable" location="extensions">inkex.py</dependency>
+  <param name="height" type="float" _gui-text="Height in mm.">10.</param>
+  <param name="width" type="float" _gui-text="Width in mm.">10.</param>
+  <param name="number" type="int" _gui-text="Number of notches">1</param>
+
+  <param name="orientation" _gui-text="Which side of the line" type="optiongroup">
+    <_option value="lu">Left or up</_option>
+    <_option value="rd">Right or down</_option>
+  </param>
+	<param name="extra_distance" type="boolean" _gui-text="Leave extra distance at beginning and end">false</param>
+  <effect>
+    <object-type>all</object-type>
+    <effects-menu>
+       <submenu _name="Examples"/>
+    </effects-menu>
+  </effect>
+  <script>
+    <command reldir="extensions" interpreter="python">notchify.py</command>
+  </script>
+  </inkscape-extension>

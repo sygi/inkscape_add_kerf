@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <_name>AddKerf</_name>
+  <id>org.ekips.filter.mine</id>
+  <dependency type="executable" location="extensions">add_kerf.py</dependency>
+  <dependency type="executable" location="extensions">metaext.py</dependency>
+  <dependency type="executable" location="extensions">simplestyle.py</dependency>
+  <dependency type="executable" location="extensions">inkex.py</dependency>
+  <param name="what" type="float" min="-100" _gui-text="Keft in 1/10 mm.">0.</param>
+  <effect>
+    <object-type>all</object-type>
+    <effects-menu>
+       <submenu _name="Examples"/>
+    </effects-menu>
+  </effect>
+  <script>
+    <command reldir="extensions" interpreter="python">add_kerf.py</command>
+  </script>
+</inkscape-extension>
